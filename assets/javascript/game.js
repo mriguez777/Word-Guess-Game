@@ -12,7 +12,7 @@ var tarot = ["Fool", "Magician", "Emperor", "Chariot", "Hierophant", "Strength",
 //Next I setup the choice variable with a random number formula to generate with index to use. 
 var choice = Math.floor(Math.random() * 10)
 
-//Setting another variable that gives me the answer of the random index
+//Setting another variable that gives me the answer of the random index. 
 var answer = tarot[choice];
 
 //variable to saving the length of the answer in variable "myLength". If I understand this corretly it means PC treats this as a game of guessing the length the user treats it as guessing a word as set with the win variable.
@@ -37,7 +37,7 @@ var output = "";
 var userLetter = "";
 
 
-var setup = function () {
+function setup () {
     for (var i = 0; i < answer.length; i++) {
         display[i] = "_";
         output = output + display[i]
@@ -46,7 +46,7 @@ var setup = function () {
     output = "";
 }
 
-var submit = function () {
+ function submit () {
     output = "";
     userLetter = $("letter").value;
     $("letter").value = "";
@@ -78,7 +78,7 @@ else {
 
 window.onload = function() {
     setup();
-    this.$("submit").onclick = submit;
+    $("submit").onclick = submit;
 }
 
 
